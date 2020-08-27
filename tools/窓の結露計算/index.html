@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="個人的なメモ" name="description"/>
+<meta content="masato" name="author"/>
+<link href="../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.5.8" name="generator"/>
+<title>窓の結露計算 - masato's memo</title>
+<link href="../../assets/stylesheets/main.01afc2df.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.83bccb1f.min.css" rel="stylesheet"/>
+<meta content="#4051b5" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,400i,700%7CConsolas&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="masato's memo" class="md-header-nav__button md-logo" href="../.." title="masato's memo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            masato's memo
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              窓の結露計算
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="masato's memo" class="md-nav__button md-logo" href="../.." title="masato's memo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    masato's memo
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../.." title="Home">
+      Home
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mkdocs/" title="MkDocs">
+      MkDocs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Python
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Python" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Python
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Python/pip/" title="Pythonのインストール">
+      Pythonのインストール
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      Tools
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Tools" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tools/" title="インストールしているツール類">
+      インストールしているツール類
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vscode/" title="VSCode">
+      VSCode
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./" title="窓の結露計算">
+      窓の結露計算
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+      個人メモ
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="個人メモ" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        個人メモ
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/font/" title="フォントの選び方">
+      フォントの選び方
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/house/" title="新築戸建の建て方">
+      新築戸建の建て方
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/invest/" title="確定拠出型年金">
+      確定拠出型年金
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/travel/" title="旅のテクニック">
+      旅のテクニック
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+      確率統計
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="確率統計" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        確率統計
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%AF%E8%A6%96%E5%8C%96/" title="データの可視化">
+      データの可視化
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E6%8E%A8%E5%AE%9A%E3%81%A8%E4%BB%AE%E8%A8%AD%E6%A4%9C%E5%AE%9A/" title="検定と仮設検定">
+      検定と仮設検定
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83/" title="正規分布">
+      正規分布
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0%E3%81%A8%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83/" title="確率変数と確率分布">
+      確率変数と確率分布
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E7%B5%B1%E8%A8%88%E9%87%8F/" title="統計量">
+      統計量
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<h1 id="_1">窓の結露計算<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>外気温と窓の貫流率から窓温度と露点を計算します。</p>
+<div class="custom_html">
+<div>
+<label for="name">外気温　:</label>
+<input id="out_temp" max="30" min="-20" onchange="redraw()" step="1" type="number" value="0">
+</input></div>
+<div>
+<label for="name">熱貫流率:</label>
+<input id="ua1" max="8" min="0.1" onchange="redraw()" step="0.1" type="number" value="1.7">
+</input></div>
+</div>
+<p>
+<div>熱貫流率参考</div>
+<div>総樹脂サッシ+Low-E トリプルガラス：1.7</div>
+<div>総樹脂サッシ+Low-E ペアガラス：2.91</div>
+<div>アルミ複合サッシ+Low-E ペアガラス：3.49</div>
+<div>板ガラス：6</div>
+</p>
+<canvas id="myChart"></canvas>
+<p>露点の計算方法：-20～+50℃における近似式（最大誤差0.083%）</p>
+<div>
+<div class="MathJax_Preview">P_{ws} = A \times 10^{\frac{m\times T}{T+T_n}} [hPa]</div>
+<script type="math/tex; mode=display">P_{ws} = A \times 10^{\frac{m\times T}{T+T_n}} [hPa]</script>
+</div>
+<div>
+<div class="MathJax_Preview">P_w=P_{ws}\times \frac{RH}{100} [hPa]</div>
+<script type="math/tex; mode=display">P_w=P_{ws}\times \frac{RH}{100} [hPa]</script>
+</div>
+<div>
+<div class="MathJax_Preview">T_d=\frac{T_n}{\frac{m}{log{P_w/A}}-1} [deg C]</div>
+<script type="math/tex; mode=display">T_d=\frac{T_n}{\frac{m}{log{P_w/A}}-1} [deg C]</script>
+</div>
+<p>ここで</p>
+<div>
+<div class="MathJax_Preview">A = 6.116441</div>
+<script type="math/tex; mode=display">A = 6.116441</script>
+</div>
+<div>
+<div class="MathJax_Preview">m = 7.591386</div>
+<script type="math/tex; mode=display">m = 7.591386</script>
+</div>
+<div>
+<div class="MathJax_Preview">T_n = 240.7263</div>
+<script type="math/tex; mode=display">T_n = 240.7263</script>
+</div>
+<p>窓の表面温度の計算式</p>
+<div>
+<div class="MathJax_Preview">tg_i = t_i - \frac{U}{\alpha_1}(t_i-t_o)[deg C]</div>
+<script type="math/tex; mode=display">tg_i = t_i - \frac{U}{\alpha_1}(t_i-t_o)[deg C]</script>
+</div>
+<p>ここで</p>
+<div>
+<div class="MathJax_Preview">tg_i：室内側窓表面温度[degC]</div>
+<script type="math/tex; mode=display">tg_i：室内側窓表面温度[degC]</script>
+</div>
+<div>
+<div class="MathJax_Preview">U：熱貫流率[W/(m^2 \times K)]</div>
+<script type="math/tex; mode=display">U：熱貫流率[W/(m^2 \times K)]</script>
+</div>
+<div>
+<div class="MathJax_Preview">\alpha_1=8.6：対流熱伝達率[W/(m^2\times K)] (自然対流)</div>
+<script type="math/tex; mode=display">\alpha_1=8.6：対流熱伝達率[W/(m^2\times K)] (自然対流)</script>
+</div>
+<div>
+<div class="MathJax_Preview">t_i：室内温度[degC]</div>
+<script type="math/tex; mode=display">t_i：室内温度[degC]</script>
+</div>
+<div>
+<div class="MathJax_Preview">t_o：室外温度[degC]</div>
+<script type="math/tex; mode=display">t_o：室外温度[degC]</script>
+</div>
+<script type="text/javascript">
+let color_pallet = [
+  "rgba(255,191,217,1)",
+  "rgba(255,255,153,1)",
+  "rgba(191,255,51,1)",
+  "rgba(179,255,255,1)",
+  "rgba(255,191,140,1)",
+  "rgba(140,255,140,1)",
+  "rgba(191,179,1,1)",
+];
+let ctx = document.getElementById("myChart");
+ctx.width = 800;
+// let context = ctx.getContext("2d");
+// context.clearRect(0, 0, ctx.width, ctx.height);
+let x = Array(36)
+  .fill()
+  .map((_, i) => i);
+// フォームから読み出し
+let temp_out = document.getElementById("out_temp").value;
+let UA1 = document.getElementById("ua1").value;
+// 初期値設定
+let A = 6.116441;
+let m = 7.591386;
+let Tn = 240.7263;
+let UA2 = 8.6;
+let RH = [30, 40, 45, 50, 55, 60, 70];
+let y = [];
+for (let i = 0; i < RH.length; i++) {
+  y.push([]);
+}
+let temp_sur = [];
+for (let i = 0; i < x.length; i++) {
+  temp_sur.push(x[i] - (UA1 / UA2) * (x[i] - temp_out));
+}
+
+for (let i = 0; i < RH.length; i++) {
+  for (let j = 0; j < x.length; j++) {
+    let Pw = (A * Math.pow(10, (m * x[j]) / (x[j] + Tn)) * RH[i]) / 100;
+    y[i].push(Tn / (m / Math.log10(Pw / A) - 1));
+  }
+}
+
+let myChart = new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: x,
+  },
+  options: {
+    responsive: false,
+    title: {
+      display: true,
+      text: "window temp, dew point vs room temp",
+    },
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: "window temp, dew point [deg C]",
+          },
+        },
+      ],
+      xAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: "room temperature [deg C]",
+          },
+        },
+      ],
+    },
+  },
+});
+
+for (let i = 0; i < RH.length; i++) {
+  myChart.data.datasets.push({
+    label: RH[i] + "%RH",
+    data: y[i],
+    borderColor: color_pallet[i],
+    backgroundColor: "rgba(0, 0, 0, 0)",
+  });
+}
+myChart.data.datasets.push({
+  label: "window temp",
+  data: temp_sur,
+  borderColor: "rgba(0, 0, 0, 0.5)",
+  backgroundColor: "rgba(0, 0, 0, 0)",
+});
+myChart.update(0);
+
+function redraw() {
+  ctx = document.getElementById("myChart");
+  temp_out = document.getElementById("out_temp").value;
+  UA1 = document.getElementById("ua1").value;
+  temp_sur = [];
+  for (let i = 0; i < x.length; i++) {
+    temp_sur.push(x[i] - (UA1 / UA2) * (x[i] - temp_out));
+  }
+  myChart.data.datasets.pop();
+  myChart.data.datasets.push({
+    label: "window temp",
+    data: temp_sur,
+    borderColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0)",
+  });
+  myChart.update(0);
+}
+
+</script>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../vscode/" rel="prev" title="VSCode">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VSCode
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/font/" rel="next" title="フォントの選び方">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                フォントの選び方
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.df0def68.min.js"></script>
+<script src="../../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<script src="../../js/config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="http://wavedrom.com/skins/default.js"></script>
+<script src="http://wavedrom.com/wavedrom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.0/mermaid.min.js"></script>
+</body>
+</html>

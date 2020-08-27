@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="個人的なメモ" name="description"/>
+<meta content="masato" name="author"/>
+<link href="../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.5.8" name="generator"/>
+<title>旅のテクニック - masato's memo</title>
+<link href="../../assets/stylesheets/main.01afc2df.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.83bccb1f.min.css" rel="stylesheet"/>
+<meta content="#4051b5" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,400i,700%7CConsolas&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="masato's memo" class="md-header-nav__button md-logo" href="../.." title="masato's memo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            masato's memo
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              旅のテクニック
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="masato's memo" class="md-nav__button md-logo" href="../.." title="masato's memo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    masato's memo
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../.." title="Home">
+      Home
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mkdocs/" title="MkDocs">
+      MkDocs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Python
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Python" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Python
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Python/pip/" title="Pythonのインストール">
+      Pythonのインストール
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      Tools
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Tools" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/tools/" title="インストールしているツール類">
+      インストールしているツール類
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/vscode/" title="VSCode">
+      VSCode
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/%E7%AA%93%E3%81%AE%E7%B5%90%E9%9C%B2%E8%A8%88%E7%AE%97/" title="窓の結露計算">
+      窓の結露計算
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+      個人メモ
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="個人メモ" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        個人メモ
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../font/" title="フォントの選び方">
+      フォントの選び方
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../house/" title="新築戸建の建て方">
+      新築戸建の建て方
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../invest/" title="確定拠出型年金">
+      確定拠出型年金
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        旅のテクニック
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="旅のテクニック">
+      旅のテクニック
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    持ち物
+  </a>
+<nav aria-label="持ち物" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    カバン
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#e-ticket">
+    e-ticket
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    財布
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    クレジットカード
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    国際キャッシュカード
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    プライオリティパス
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    現金
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    腕時計
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    防寒着
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    着替え
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    洗面用具
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    薬
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    テクニック
+  </a>
+<nav aria-label="テクニック" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    両替
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    保険
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    携帯電話
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    予約
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    飛行機
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    安全のために
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+      確率統計
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="確率統計" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        確率統計
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%AF%E8%A6%96%E5%8C%96/" title="データの可視化">
+      データの可視化
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E6%8E%A8%E5%AE%9A%E3%81%A8%E4%BB%AE%E8%A8%AD%E6%A4%9C%E5%AE%9A/" title="検定と仮設検定">
+      検定と仮設検定
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83/" title="正規分布">
+      正規分布
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0%E3%81%A8%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83/" title="確率変数と確率分布">
+      確率変数と確率分布
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E7%B5%B1%E8%A8%88%E9%87%8F/" title="統計量">
+      統計量
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    持ち物
+  </a>
+<nav aria-label="持ち物" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    カバン
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#e-ticket">
+    e-ticket
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    財布
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    クレジットカード
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    国際キャッシュカード
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    プライオリティパス
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    現金
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    腕時計
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    防寒着
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    着替え
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    洗面用具
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    薬
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    テクニック
+  </a>
+<nav aria-label="テクニック" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    両替
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    保険
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    携帯電話
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    予約
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    飛行機
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    安全のために
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="_1">旅のテクニック<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>海外出張、海外旅行における注意点やテクニックを忘れないようメモしておく。</p>
+<h2 id="_2">持ち物<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>個人的ないつもの持ち物をリスト化しておく。多少お金を使うバックパッカーな感じ。</p>
+<ul>
+<li>機内持ち込み<ul>
+<li>機内持ち込みバッグ</li>
+<li>貴重品<ul>
+<li>パスポート</li>
+<li>e-ticket</li>
+<li>ホテルの予約表</li>
+<li>クレジットカード</li>
+<li>国際キャッシュカード</li>
+<li>プライオリティパス</li>
+<li>財布</li>
+<li>現金</li>
+<li>KIX Card</li>
+</ul>
+</li>
+<li>SIM freeスマホ</li>
+<li>腕時計</li>
+<li>カメラ</li>
+<li>歯ブラシ/歯磨き粉/フロス</li>
+<li>メモ帳</li>
+<li>筆記用具</li>
+<li>ガイドブック</li>
+<li>日焼け止め</li>
+<li>眼鏡ケース</li>
+<li>電子機器<ul>
+<li>充電器/モバイルバッテリ/予備SDカード/ケーブル類</li>
+<li>コンセントの変換プラグ</li>
+</ul>
+</li>
+<li>防寒着</li>
+</ul>
+</li>
+<li>預けることもあるカバン<ul>
+<li>着替え</li>
+<li>洗面用具</li>
+<li>洗濯グッズ<ul>
+<li>洗剤、洗濯板、ロープ等</li>
+</ul>
+</li>
+<li>箸、スプーン</li>
+<li>薬</li>
+<li>サングラス</li>
+<li>帽子</li>
+<li>日焼け止め</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">カバン<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>機内持ち込み兼、街歩き用。治安の悪い地域にいっても大丈夫なように鍵を付ける。</p>
+<h3 id="e-ticket">e-ticket<a class="headerlink" href="#e-ticket" title="Permanent link">¶</a></h3>
+<p>チケット類はスマホに全てスマホに入れていこう。紙も必要なことが多いので必ず印刷物を持っていくこと。</p>
+<h3 id="_4">財布<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>盗難防止にチェーン付きを。</p>
+<h3 id="_5">クレジットカード<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>VISA, Masterそれぞれ1枚。旅行保険用のカードもあれば。</p>
+<h3 id="_6">国際キャッシュカード<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>海外ATMで下す用。今はSBI。</p>
+<h3 id="_7">プライオリティパス<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>プライオリティパスがあれば空港のラウンジが利用できる。長いトランジットには非常におすすめ。プライオリティパスの取得はクレジットカードの付帯で。楽天プレミアムかJCB Premierがリーズナブル。</p>
+<h3 id="_8">現金<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>比較的安全なところならATMで引き出す。利便性が悪そうなら必要な現金を持っていく。日本円か地域によっては米ドル/ユーロも。</p>
+<h3 id="_9">腕時計<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<p>プロトレック。気圧や方角が分かれば楽しいときもある。</p>
+<h3 id="_10">防寒着<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>モンベル、ライトシェルジャケット。機内と街歩き用。</p>
+<h3 id="_11">着替え<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<p>長期でも3～4日分までにして荷物を減らす。基本速乾素材でそろえて皺になりにくいものを。</p>
+<ul>
+<li>下着<ul>
+<li>ユニクロ、エアリズムメッシュ系</li>
+</ul>
+</li>
+<li>Tシャツ<ul>
+<li>モンベル、ウィックロンTシャツ</li>
+</ul>
+</li>
+<li>シャツ<ul>
+<li>モンベル、ウィックロンシャツ</li>
+</ul>
+</li>
+<li>パンツ<ul>
+<li>登山用</li>
+</ul>
+</li>
+<li>防寒着（寒冷地）<ul>
+<li>コンパクトダウン</li>
+<li>薄手のフリース</li>
+<li>ハードシェル</li>
+</ul>
+</li>
+</ul>
+<h3 id="_12">洗面用具<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<ul>
+<li>シャンプー/石鹸</li>
+<li>化粧水</li>
+</ul>
+<h3 id="_13">薬<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<ul>
+<li>今飲んでいるもの</li>
+<li>鎮痛剤</li>
+<li>下痢止め（緊急事態用）</li>
+<li>絆創膏</li>
+</ul>
+<h2 id="_14">テクニック<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
+<h3 id="_15">両替<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
+<p>両替で最も得なのはクレジットカードによるキャッシング。ただしすぐに返済すること。次にキャッシュカードによる引き出しか通常の両替。米ドル/ユーロは日本で両替。他は現地両替がもっともお得。</p>
+<h3 id="_16">保険<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
+<p>治療用の保険はかけておこう。クレジットカードに付帯のものがあると思うので足りないものを補う感じで。損保のOFFが比較的安価で評判もそれなり。連絡先は必ずメモっておくこと。保険会社が直接支払ってくれるキャッシュレスに対応した病院なら支払いに困らなくていい。</p>
+<h3 id="_17">携帯電話<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
+<p>基本的に現地のトラベルSIMを購入するのが最も安価。中国やユーロ圏をまたいで旅行する場合は香港のトラベルSIMが便利。現地の旅行代理店で申し込んだりする場合は通話用のSIMを。</p>
+<h3 id="_18">予約<a class="headerlink" href="#_18" title="Permanent link">¶</a></h3>
+<p>ホテルはavago(東南アジア), booking.com(安めの), expediaをよく使う。</p>
+<h3 id="_19">飛行機<a class="headerlink" href="#_19" title="Permanent link">¶</a></h3>
+<p>荷物が少なければ全て機内持ち込みに。脱水、エコノミー症候群を回避する為に水分は意識的に摂取しよう。寒いことが多いので羽織るものを一つ。</p>
+<h2 id="_20">安全のために<a class="headerlink" href="#_20" title="Permanent link">¶</a></h2>
+<ul>
+<li>薬は使い慣れたものを持って行く<ul>
+<li>処方薬/鎮痛剤/風薬/下痢止め等</li>
+</ul>
+</li>
+<li>よくある体調不良は下痢。ただし下痢止めの服用はNG。水飲んで我慢する。下痢止めは飛行機等の緊急事態のときだけにすること。特に硬水の地域に行くと下痢になりやすい。数日で慣れるので我慢。やばい場合は病院へ。コーポレートカード付帯の保険で対応出来る。まずは日本に電話して病院の情報をゲット、出来れば日本語が通じてキャッシュレス決済出来る病院に。タクシー等の交通費も保険がきくので領収書をとっておくこと。</li>
+<li>狂犬病はヤバイ（発症すれば実質100%助からない）。哺乳動物(犬、猫等)に噛まれたり、引っかかれる、粘膜に唾液が接触した場合、何があっても最優先(24時間以内)で病院に行って、狂犬病のワクチンやグロブリンを接種する。日本で破傷風のワクチンを接種していなければコレも一緒に。特にグロブリンは日本では入手出来ないので、予定を変更してでも必ず現地で接種してから帰国すること。<ul>
+<li>噛まれたりしたら、すぐに清潔な流水で流し、石鹸で傷口を洗うこと（20分くらいが目安）。基本的に止血はしないこと。</li>
+</ul>
+</li>
+<li>蚊が多い地域の場合、マラリア対策の為にも虫よけを。ディート、イカリジンの2択。蚊だけが対象ならどちらでもOK。ただしイカリジンの方が安心して使える。ダニ等にも対応するならディート。</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../invest/" rel="prev" title="確定拠出型年金">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                確定拠出型年金
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%AF%E8%A6%96%E5%8C%96/" rel="next" title="データの可視化">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                データの可視化
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.df0def68.min.js"></script>
+<script src="../../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<script src="../../js/config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="http://wavedrom.com/skins/default.js"></script>
+<script src="http://wavedrom.com/wavedrom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.0/mermaid.min.js"></script>
+</body>
+</html>

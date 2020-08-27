@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="個人的なメモ" name="description"/>
+<meta content="masato" name="author"/>
+<link href="../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.5.8" name="generator"/>
+<title>MkDocs - masato's memo</title>
+<link href="../assets/stylesheets/main.01afc2df.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.83bccb1f.min.css" rel="stylesheet"/>
+<meta content="#4051b5" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,400i,700%7CConsolas&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../css/custom.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#mkdocs">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="masato's memo" class="md-header-nav__button md-logo" href=".." title="masato's memo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            masato's memo
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              MkDocs
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="masato's memo" class="md-nav__button md-logo" href=".." title="masato's memo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    masato's memo
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href=".." title="Home">
+      Home
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        MkDocs
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="MkDocs">
+      MkDocs
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    ドキュメントサーバー
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    公式ドキュメント
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    インストール
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml">
+    mkdocs.ymlの編集
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Python
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Python" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Python
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Python/pip/" title="Pythonのインストール">
+      Pythonのインストール
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      Tools
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Tools" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tools/tools/" title="インストールしているツール類">
+      インストールしているツール類
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tools/vscode/" title="VSCode">
+      VSCode
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tools/%E7%AA%93%E3%81%AE%E7%B5%90%E9%9C%B2%E8%A8%88%E7%AE%97/" title="窓の結露計算">
+      窓の結露計算
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+      個人メモ
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="個人メモ" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        個人メモ
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/font/" title="フォントの選び方">
+      フォントの選び方
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/house/" title="新築戸建の建て方">
+      新築戸建の建て方
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/invest/" title="確定拠出型年金">
+      確定拠出型年金
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%80%8B%E4%BA%BA%E3%83%A1%E3%83%A2/travel/" title="旅のテクニック">
+      旅のテクニック
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+      確率統計
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="確率統計" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        確率統計
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%AF%E8%A6%96%E5%8C%96/" title="データの可視化">
+      データの可視化
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E6%8E%A8%E5%AE%9A%E3%81%A8%E4%BB%AE%E8%A8%AD%E6%A4%9C%E5%AE%9A/" title="検定と仮設検定">
+      検定と仮設検定
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83/" title="正規分布">
+      正規分布
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0%E3%81%A8%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83/" title="確率変数と確率分布">
+      確率変数と確率分布
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E7%B5%B1%E8%A8%88%E9%87%8F/" title="統計量">
+      統計量
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    ドキュメントサーバー
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    公式ドキュメント
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    インストール
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocsyml">
+    mkdocs.ymlの編集
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">¶</a></h1>
+<h2 id="_1">ドキュメントサーバー<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>個人的な非公式ドキュメント類を作成＆整理＆公開する。HTMLでゴリゴリ書いてもいいけど、どう考えても面倒なので他の方法を検討する。</p>
+<p>HTMLの変わりではないが、簡単に書くための言語として軽量マークアップ言語と呼ばれるものがある。この軽量マークアップ言語からHTMLに変換することで、整理と公開を簡単にする。軽量マークアップ言語ではおそらく次のようなものが有名。</p>
+<ul>
+<li>markdown</li>
+<li>asciidoc</li>
+<li>sphinx</li>
+</ul>
+<p>今回は一番簡単なmarkdownを選択した。ただしmarkdownは方言が多すぎるという問題があるので注意する。それでも色々なところで使われているので学習コストは一番低いだろう。</p>
+<p>markdownで記載されたファイルをhtmlに変換する。単に変換するだけなら色々あるけど、せっかくなのでカッコよくWebページとして公開したい。ここにも種類が色々あるが、導入が簡単そうなmkdocsを選択。</p>
+<h2 id="_2">公式ドキュメント<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<ul>
+<li><i class="fa fa-external-link"></i> <a href="https://www.mkdocs.org/">MkDocs</a></li>
+<li><i class="fa fa-external-link"></i> <a href="https://facelessuser.github.io/pymdown-extensions/">PyMdown Extensions Documentaion</a></li>
+<li><i class="fa fa-external-link"></i> <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">Material for MkDocs</a></li>
+</ul>
+<h2 id="_3">インストール<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>mkdocsはpythonなのでpipでインストールする。ついでにテンプレートや機能拡張もインストールする。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install mkdocs
+pip install mkdocs-material
+pip install python-markdown-math
+pip install mdx_truly_sane_lists
+pip install pymdown-extensions
+pip install mkdocs-wavedrom-plugin
+pip install plantuml_markdown
+pip install fontawesome_markdown
+</code></pre></div>
+</td></tr></table>
+<p>準備が整ったので<code>mkdocs new projectname</code>でプロジェクトを作成。docsディレクトリにmarkdownファイルを入れて、<code>mkdocs build</code>でビルドすとsiteディレクトリHTMLができる。このファイルを公開する。なおビルドせずに内容を確認するには<code>mkdocs serve</code>とする。</p>
+<h2 id="mkdocsyml">mkdocs.ymlの編集<a class="headerlink" href="#mkdocsyml" title="Permanent link">¶</a></h2>
+<p>必要に応じてmkdocs.ymlを編集する。
+なおmkdocs-wavedrom-pluginはそのままだとうまく動かなかったので、下に記載しているような修正が必要であった。</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">masato's memo</span>
+<span class="nt">site_description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">個人的なメモ</span>
+<span class="nt">site_author</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">masato</span>
+
+<span class="nt">theme</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">material</span>
+  <span class="nt">feature</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">instant</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tabs</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">search.highlight</span>
+  <span class="nt">palette</span><span class="p">:</span>
+    <span class="nt">primary</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">indigo</span>
+    <span class="c1"># red, pink, purple, deep perple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, arange, dep orange, brown, grey, blue grey, black, white</span>
+    <span class="nt">accent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">indigo</span>
+    <span class="c1"># red, pink, purple, deep perple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, arange, dep orange</span>
+<span class="nt">extra</span><span class="p">:</span>
+  <span class="nt">font</span><span class="p">:</span>
+    <span class="nt">text</span><span class="p">:</span> <span class="s">"Noto</span><span class="nv"> </span><span class="s">Sans</span><span class="nv"> </span><span class="s">JP"</span>
+    <span class="nt">code</span><span class="p">:</span> <span class="s">"Consolas"</span>
+  <span class="nt">search</span><span class="p">:</span>
+    <span class="nt">language</span><span class="p">:</span> <span class="s">"jp"</span>
+
+<span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">markdownwavedrom</span>
+  <span class="p p-Indicator">-</span> <span class="nt">search</span><span class="p">:</span>
+      <span class="nt">lang</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ja</span>
+
+<span class="c1"># markdownwavedromを修正する！！</span>
+<span class="c1"># from typing import Text</span>
+<span class="c1"># from mkdocs.plugins import BasePlugin  # type: ignore</span>
+<span class="c1"># from bs4 import BeautifulSoup          # type: ignore</span>
+
+<span class="c1"># class MarkdownWavedromPlugin(BasePlugin):</span>
+<span class="c1">#     def on_post_page(self, output_content, config, **kwargs):</span>
+<span class="c1">#         soup = BeautifulSoup(output_content, 'html.parser')</span>
+<span class="c1">#         sections = soup.find_all("div", class_="wavedrom")</span>
+
+<span class="c1">#         f_exists = False</span>
+<span class="c1">#         for section in sections:</span>
+<span class="c1">#             f_exists = True</span>
+<span class="c1">#             section.name = "script"</span>
+<span class="c1">#             section["type"] = "WaveDrom"</span>
+
+<span class="c1">#         if f_exists:</span>
+<span class="c1">#             soup.find("body").attrs["onload"] = "WaveDrom.ProcessAll()"</span>
+
+<span class="c1">#         return Text(soup)</span>
+
+<span class="nt">markdown_extensions</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonition</span>
+  <span class="p p-Indicator">-</span> <span class="nt">pymdownx.highlight</span><span class="p">:</span>
+      <span class="nt">use_pygments</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">linenums</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">linenums_style</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.inline</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">footnotes</span>
+  <span class="c1"># - md_in_html</span>
+  <span class="p p-Indicator">-</span> <span class="nt">toc</span><span class="p">:</span>
+      <span class="nt">permalink</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.arithmatex</span>
+  <span class="p p-Indicator">-</span> <span class="nt">pymdownx.betterem</span><span class="p">:</span>
+      <span class="nt">smart_enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
+  <span class="c1"># - pymdownx.caret</span>
+  <span class="c1"># - pymdownx.critic</span>
+  <span class="c1"># - pymdownx.details</span>
+  <span class="c1"># - pymdownx.emoji:</span>
+  <span class="c1">#     emoji_index: !!python/name:materialx.emoji.twemoji</span>
+  <span class="c1">#     emoji_generator: !!python/name:materialx.emoji.to_svg</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.inlinehilite</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.magiclink</span>
+  <span class="c1"># - pymdownx.mark</span>
+  <span class="c1"># - pymdownx.smartsymbols</span>
+  <span class="p p-Indicator">-</span> <span class="nt">pymdownx.tasklist</span><span class="p">:</span>
+      <span class="nt">custom_checkbox</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="c1"># - pymdownx.tabbed</span>
+  <span class="c1"># - pymdownx.tilde</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.keys</span>
+  <span class="c1"># - pymdownx.snippets</span>
+  <span class="p p-Indicator">-</span> <span class="nt">mdx_truly_sane_lists</span><span class="p">:</span>
+      <span class="nt">nested_indent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+  <span class="p p-Indicator">-</span> <span class="nt">plantuml_markdown</span><span class="p">:</span>
+      <span class="c1"># server: http://www.plantuml.com/plantuml</span>
+      <span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">svg</span>
+  <span class="p p-Indicator">-</span> <span class="nt">pymdownx.superfences</span><span class="p">:</span>
+      <span class="nt">custom_fences</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mermaid</span>
+          <span class="nt">class</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mermaid</span>
+          <span class="nt">format</span><span class="p">:</span> <span class="kt">!!python/name:pymdownx.superfences.fence_div_format</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wavedrom</span>
+          <span class="nt">class</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wavedrom</span>
+          <span class="nt">format</span><span class="p">:</span> <span class="kt">!!python/name:pymdownx.superfences.fence_div_format</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fontawesome_markdown</span>
+
+<span class="nt">extra_javascript</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">js/config.js</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">http://wavedrom.com/skins/default.js</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">http://wavedrom.com/wavedrom.min.js</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.0/mermaid.min.js</span>
+
+<span class="nt">extra_css</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">css/custom.css</span>
+</code></pre></div>
+</td></tr></table>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href=".." rel="prev" title="Home">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../Python/pip/" rel="next" title="Pythonのインストール">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Pythonのインストール
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../assets/javascripts/vendor.df0def68.min.js"></script>
+<script src="../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<script src="../js/config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="http://wavedrom.com/skins/default.js"></script>
+<script src="http://wavedrom.com/wavedrom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.0/mermaid.min.js"></script>
+</body>
+</html>

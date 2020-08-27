@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="個人的なメモ" name="description"/>
+<meta content="masato" name="author"/>
+<link href="../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-5.5.8" name="generator"/>
+<title>確定拠出型年金 - masato's memo</title>
+<link href="../../assets/stylesheets/main.01afc2df.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.83bccb1f.min.css" rel="stylesheet"/>
+<meta content="#4051b5" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,400i,700%7CConsolas&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="masato's memo" class="md-header-nav__button md-logo" href="../.." title="masato's memo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            masato's memo
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              確定拠出型年金
+            
+          </span>
+</div>
+</div>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="masato's memo" class="md-nav__button md-logo" href="../.." title="masato's memo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    masato's memo
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../.." title="Home">
+      Home
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mkdocs/" title="MkDocs">
+      MkDocs
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
+      Python
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Python" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Python
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Python/pip/" title="Pythonのインストール">
+      Pythonのインストール
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
+      Tools
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="Tools" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        Tools
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/tools/" title="インストールしているツール類">
+      インストールしているツール類
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/vscode/" title="VSCode">
+      VSCode
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tools/%E7%AA%93%E3%81%AE%E7%B5%90%E9%9C%B2%E8%A8%88%E7%AE%97/" title="窓の結露計算">
+      窓の結露計算
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<label class="md-nav__link" for="nav-5">
+      個人メモ
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="個人メモ" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-5">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        個人メモ
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../font/" title="フォントの選び方">
+      フォントの選び方
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../house/" title="新築戸建の建て方">
+      新築戸建の建て方
+    </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+        確定拠出型年金
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"></path></svg>
+</span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./" title="確定拠出型年金">
+      確定拠出型年金
+    </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    投資に関する基本方針
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    ポートフォリオ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    確定拠出年金マッチング拠出制度
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    参考
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    その他
+  </a>
+<nav aria-label="その他" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    元本保証型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72">
+    72の法則
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/" title="旅のテクニック">
+      旅のテクニック
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" id="nav-6" type="checkbox"/>
+<label class="md-nav__link" for="nav-6">
+      確率統計
+      <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path></svg>
+</span>
+</label>
+<nav aria-label="確率統計" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="nav-6">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+        確率統計
+      </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%AF%E8%A6%96%E5%8C%96/" title="データの可視化">
+      データの可視化
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E6%8E%A8%E5%AE%9A%E3%81%A8%E4%BB%AE%E8%A8%AD%E6%A4%9C%E5%AE%9A/" title="検定と仮設検定">
+      検定と仮設検定
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83/" title="正規分布">
+      正規分布
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0%E3%81%A8%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83/" title="確率変数と確率分布">
+      確率変数と確率分布
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E7%A2%BA%E7%8E%87%E7%B5%B1%E8%A8%88/%E7%B5%B1%E8%A8%88%E9%87%8F/" title="統計量">
+      統計量
+    </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    投資に関する基本方針
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    ポートフォリオ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    確定拠出年金マッチング拠出制度
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    参考
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    その他
+  </a>
+<nav aria-label="その他" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    元本保証型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#72">
+    72の法則
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<h1 id="_1">確定拠出型年金<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p>確定拠出型年金の商品選択の基本方針を記載する。</p>
+<h2 id="_2">投資に関する基本方針<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>リスクを取ってリターンを期待する。確定拠出型年金の運用額は高々知れている。多少リスクを大きくとっても良いだろう。また強制的に定年まで積み立てることになるので、この点でもリスクを取ることが可能と考える。</p>
+<h2 id="_3">ポートフォリオ<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>非課税枠を有効活用するためにも基本的に100%株式とする。通常のポートフォリオでは債権と混ぜてリスクを小さくするが、先述したように運用額が小さい。もしリスクヘッジの為に債権を混ぜるのであれば、確定拠出型年金の枠ではなく別枠で債権を運用した方がいい。それではどのような商品を選べばいいだろうか。一般的に将来成長する商品に投資するべきだが、それが分かれば苦労しない。一部の地域だけ切り取ってみると、浮き沈みがあるのが当たり前だが、世界全体で平均すれば基本的に経済は常に上向き傾向である。例え戦争などがあっても一部の地域は栄えるし、時間経過とともに回復している。ということで世界全体に投資する方針とする。全世界に投資するといっても先進国中心に投資する場合や、新興国を中心にする場合、またアクティブかパッシブか等、選択すべき項目が多くある。</p>
+<p>投資先は可能な限り広範囲にすることでリスクが小さくなるが、そのバランスをどうするかが重要となる。一般的には現在の株式規模のバランスで投資するのが良いとされている。基本はこの全世界で、あとは好みで調整すればいい。全世界にバランスよく投資しようと思うと、「野村ＤＣ国内株式インデックスＦ」「野村ＤＣ外国株式インデックスＦ」「ＤＩＡＭ新興国株式インデックス」をバランスすることになる。おおざっぱにはそれぞれに1:8:1で投資するイメージだ。ところでこう見ると日本と新興国はパイが小さいことが分かる。本当にここにも投資する必要があるか考えてみたい。まずは日本から。日本は一番馴染みがあるが、日本に集中投資するということは、日本で働いていて日本の会社から給料を得ている私からすると少々リスクが大きいように感じる。株価が落ちるような時はボーナスも減るだろうしね。ということで個人的には日本はポートフォリオから除くことにした。次は新興国だ。新興国と言われると南米やアフリカが中心かと思うが、実はそうではない。。商品の一つであるＤＩＡＭ新興国株式インデックスの内訳をみてみよう。実際その多くが中国・韓国・台湾が占めている。これは皆がイメージする新興国とは少しずれるのではないだろうか。話がそれたが、実は本当の新興国はGDPと株価がうまくリンクしていない。まだ株式市場が未発達であったりすることが原因のようですが。。。また新興国の発展には先進国の援助が欠かせないのが実情だろう。ということは新興国の発展は先進国の発展にもつながっていると考えることができる。また一番大きな問題だが、新興国への投資は手数料が高い。「野村ＤＣ外国株式インデックスＦ」の手数料が0.154%に対して「ＤＩＡＭ新興国株式インデックス」は0.595%だ。これらの理由から新興国への投資もパスすることにした。</p>
+<p>次にアクティブかパッシブかを考える。これは議論の余地なくパッシブ一択だろう。長期で平均するとパッシブに勝つアクティブはほんの数パーセントしか存在しないはず。またアクティブは手数料が高すぎるので手数料負けする可能性が高い。</p>
+<p>これらから「野村ＤＣ外国株式インデックスＦ」100%で運用することにした。</p>
+<h2 id="_4">確定拠出年金マッチング拠出制度<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<p>ところで確定拠出型年金だけでは運用額は高々知れている。このため、他の手段でも投資はしておきたい。ただ最近始まった確定拠出年金マッチング拠出制度に追加投資する前に、積立NISAの枠を埋めることをお勧めする。こちらの方が通常は使い勝手がいいだろう。</p>
+<p>もし積立NISAを始めるならベストな選択肢は明らかに楽天証券+楽天カード。月5万までなら1%のポイントが入ってくるので実質1%引きで購入することが可能だ。</p>
+<h2 id="_5">参考<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<p>もし手堅く運用するなら各国の年金機構のポートフォリオが参考になるだろう。</p>
+<ul>
+<li>日本<ul>
+<li><a href="https://www.gpif.go.jp/gpif/portfolio.html">https://www.gpif.go.jp/gpif/portfolio.html</a></li>
+</ul>
+</li>
+<li>海外<ul>
+<li><a href="https://www.gpif.go.jp/gpif/faq/faq_07.html">https://www.gpif.go.jp/gpif/faq/faq_07.html</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">その他<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h3 id="_7">元本保証型<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>確定拠出型年金の元本保証型の商品を確認してみる。</p>
+<table>
+<thead>
+<tr>
+<th>商品名</th>
+<th>金利</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>みずほＤＣ定期預金（１年）</td>
+<td>0.002%</td>
+</tr>
+<tr>
+<td>三井住友銀行ＤＣ定期（３年）</td>
+<td>0.002%</td>
+</tr>
+<tr>
+<td>みずほＤＣ定期預金（５年）</td>
+<td>0.002%</td>
+</tr>
+<tr>
+<td>ろうきん定期（スーパー型）</td>
+<td>0.10%</td>
+</tr>
+<tr>
+<td>第一のつみたて年金（５年）</td>
+<td>0.05%</td>
+</tr>
+<tr>
+<td>明治安田利率保証年金（５年）</td>
+<td>0.003%</td>
+</tr>
+<tr>
+<td>ニッセイ１０年利率保証プラス</td>
+<td>0.108%</td>
+</tr>
+<tr>
+<td>第一のつみたて年金（１０年）</td>
+<td>0.07%</td>
+</tr>
+</tbody>
+</table>
+<p>ネット銀行の普通金利より低いのがほとんど、定期預金に意味すらありませんね。どうやらこちらを選択する意味はなさそうです。</p>
+<h3 id="72">72の法則<a class="headerlink" href="#72" title="Permanent link">¶</a></h3>
+<p>投資の世界では72の法則と呼ばれる法則がる。これはある金利でお金を預けたとき、2倍になる期間を表すもので金利をrとすると72/rが2倍にするのに必要な年数を表す。</p>
+<div>
+<div class="MathJax_Preview">
+2倍になる年数(n) = \frac{72}{金利(r)}
+</div>
+<script type="math/tex; mode=display">
+2倍になる年数(n) = \frac{72}{金利(r)}
+</script>
+</div>
+<p>数学的には
+$$
+n= \frac{\log{2}}{\log{(1+r)}}
+$$
+で表される。これをプロットしてみる。</p>
+<p><img alt="double_vs_rate1" src="../img/invest/double_vs_rate1.svg"/></p>
+<p>金利が2%以上であれば誤差が1年以下となってまぁまぁ信頼できる法則であることが確認出来る。最近の銀行金利には全く当てはまらないですね。ちなみに2019年のネット銀行の最高金利0.1%で計算すると2倍になるのに693年必要です。</p>
+<p>それでは金利が低いときに簡単に計算する方法はないのだろうか。上で示した式を考える。<span><span class="MathJax_Preview">log{(1+r)}</span><script type="math/tex">log{(1+r)}</script></span>の計算が面倒なの近似式を考える。<span><span class="MathJax_Preview">log{(1+r)}</span><script type="math/tex">log{(1+r)}</script></span>を原点付近でテイラー展開してみよう。<span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>の0付近でのテイラー展開（マクローリン展開）は
+$$
+f(x) = f(0) + f'(0)x+\frac{1}{2!}f''(0)x^2+\frac{1}{3!}f'''(0)x^3+...
+$$
+となる。xが極めて0に近い場合はf(x) = xとなる。<span><span class="MathJax_Preview">\log{2}=0.69315</span><script type="math/tex">\log{2}=0.69315</script></span>なので
+$$
+n' = \frac{69.315}{r}
+$$
+と近似できる。これをプロットしてみよう。</p>
+<p><img alt="double_vs_rate2" src="../img/invest/double_vs_rate2.svg"/></p>
+<p>こちらなら使えそうな精度ですね。使い道があるかは別として。。。</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../house/" rel="prev" title="新築戸建の建て方">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                新築戸建の建て方
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../travel/" rel="next" title="旅のテクニック">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                旅のテクニック
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="../../assets/javascripts/vendor.df0def68.min.js"></script>
+<script src="../../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<script src="../../js/config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="http://wavedrom.com/skins/default.js"></script>
+<script src="http://wavedrom.com/wavedrom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.0/mermaid.min.js"></script>
+</body>
+</html>
